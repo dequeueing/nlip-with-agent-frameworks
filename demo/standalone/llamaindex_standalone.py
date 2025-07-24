@@ -18,7 +18,7 @@ from llama_index.llms.openai_like import OpenAILike
 # Import NLIP components
 from nlip_sdk.nlip import NLIP_Factory
 from nlip_sdk import nlip
-from nlip_server.nlip_server import server
+from nlip_server import server
 
 # Import shared utilities
 from ..shared.weather_tools import get_weather_alerts, get_weather_forecast

@@ -19,7 +19,7 @@ from langchain_core.callbacks import BaseCallbackHandler
 # Import NLIP components
 from nlip_sdk.nlip import NLIP_Factory
 from nlip_sdk import nlip
-from nlip_server.nlip_server import server
+from nlip_server import server
 
 # Import shared utilities
 from ..shared.nlip_client import NLIPClient

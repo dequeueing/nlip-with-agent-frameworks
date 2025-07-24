@@ -18,7 +18,7 @@ from llama_index.llms.openai_like import OpenAILike
 # Import NLIP components
 from nlip_sdk.nlip import NLIP_Factory
 from nlip_sdk import nlip
-from nlip_server.nlip_server import server
+from nlip_server import server
 
 # Import shared utilities
 from ..shared.weather_tools import get_weather_alerts, get_weather_forecast
@@ -125,7 +125,7 @@ class LlamaIndexSession(server.NLIP_Session):
             self.context = Context(self.agent)
             
             # Use the agent to process the query
-            response = await self.agent.arun(text, ctx=self.context)
+            response = await self.agent.run(text, ctx=self.context)
             response_text = str(response)
             
             print("=" * 80)

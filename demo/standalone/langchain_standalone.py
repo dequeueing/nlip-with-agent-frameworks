@@ -15,11 +15,11 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain.agents import create_tool_calling_agent, AgentExecutor
 from langchain_core.callbacks import BaseCallbackHandler
-
+w
 # Import NLIP components
 from nlip_sdk.nlip import NLIP_Factory
 from nlip_sdk import nlip
-from nlip_server.nlip_server import server
+from nlip_server import server
 
 # Import shared utilities
 from ..shared.weather_tools import get_weather_alerts, get_weather_forecast
