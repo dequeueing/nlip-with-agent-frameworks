@@ -47,8 +47,8 @@ nlip-with-agent-frameworks/
 git clone <repository-url>
 cd nlip-with-agent-frameworks
 
-# Install NLIP dependencies first
-pip install nlip_sdk nlip_server
+# Clone the nlip-server dependency into the project directory
+git clone https://github.com/nlip-project/nlip_server.git
 
 # Install project dependencies
 poetry install  # or: pip install -r requirements.txt

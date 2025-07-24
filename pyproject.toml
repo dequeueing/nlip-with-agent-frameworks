@@ -2,13 +2,12 @@
 name = "nlip-with-agent-frameworks"
 version = "1.0.0"
 description = "NLIP integration demo with popular AI agent frameworks"
-authors = ["NLIP Organization <demo@nlip.org>"]
 readme = "README.md"
 packages = [{include = "demo"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-fastapi = "^0.104.1"
+fastapi = "^0.115.12"
 uvicorn = "^0.24.0"
 httpx = "^0.25.2"
 pydantic = "^2.5.0"
@@ -16,10 +15,11 @@ python-dotenv = "^1.0.0"
 
 # NLIP dependencies
 nlip-sdk = "^0.1.2"
+nlip-server = {path = "./nlip_server", develop = true}
 
 # LangChain dependencies
 langchain = "^0.1.0"
-langchain-openai = "^0.0.5"
+langchain-openai = "^0.1.0"
 langchain-core = "^0.1.0"
 
 # LlamaIndex dependencies
