@@ -64,13 +64,11 @@ Open two terminals in the project directory:
 
 **Terminal 1 - Start LlamaIndex Agent:**
 ```bash
-export OPENROUTER_API_KEY=your-key-from-https://openrouter.ai/
 poetry run uvicorn demo.inter_agent.llamaindex_worker:app --host 0.0.0.0 --port 8013 --reload
 ```
 
 **Terminal 2 - Start LangChain Agent:**
 ```bash
-export OPENROUTER_API_KEY=your-key-from-https://openrouter.ai/
 poetry run uvicorn demo.inter_agent.langchain_coordinator:app --host 0.0.0.0 --port 8012 --reload
 ```
 
