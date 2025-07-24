@@ -58,7 +58,7 @@ cp .env.example .env
 # Edit .env with: OPENROUTER_API_KEY=your-key-from-https://openrouter.ai/
 ```
 
-**Run Inter-Agent Demo:**
+### Run Inter-Agent Demo
 
 Open two terminals in the project directory:
 
@@ -81,7 +81,7 @@ curl -X POST http://localhost:8012/nlip/ \
   -d '{"format": "text", "subformat": "english", "content": "Weather alerts for California?"}'
 ```
 
-**Run Standalone Demo:**
+### Run Standalone Demo
 ```bash
 export OPENROUTER_API_KEY=your-key-from-https://openrouter.ai/
 poetry run uvicorn demo.standalone.langchain_standalone:app --port 8014
@@ -93,23 +93,6 @@ poetry run uvicorn demo.standalone.langchain_standalone:app --port 8014
 **Inter-Agent:** Client → LangChain → (NLIP) → LlamaIndex → Weather APIs  
 **Standalone:** Client → NLIP Server → Weather APIs  
 
-## 🧪 Testing
-
-The demo provides real-time weather information using National Weather Service APIs. Test with queries like:
-- "What are the weather alerts for California?"
-- "Get weather forecast for latitude 39.1612 longitude -86.5264"
-
-## 📚 Documentation
-
-All setup, API, and troubleshooting information is contained in this README.
-
-## 🔧 Key Features
-
-- **NLIP Protocol**: Standardized JSON messaging (`format`, `subformat`, `content`)
-- **NLIP SDK & Server**: Uses official NLIP SDK and Server for protocol implementation
-- **Weather Tools**: National Weather Service APIs (alerts, forecasts)
-- **Production Ready**: Error handling, logging, configuration management
-- **Extensible**: Easy to add new tools and agents
 
 ## 📋 Dependencies
 
