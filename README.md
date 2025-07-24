@@ -81,9 +81,13 @@ curl -X POST http://localhost:8012/nlip/ \
 
 ### Run Standalone Demo
 ```bash
-export OPENROUTER_API_KEY=your-key-from-https://openrouter.ai/
 poetry run uvicorn demo.standalone.langchain_standalone:app --port 8014
 # Or: poetry run uvicorn demo.standalone.llamaindex_standalone:app --port 8015
+
+# Test:
+curl -X POST http://localhost:8014/nlip/ \
+  -H "Content-Type: application/json" \
+  -d '{"format": "text", "subformat": "english", "content": "Weather alerts for California?"}'
 ```
 
 ## 📊 Demo Scenarios
